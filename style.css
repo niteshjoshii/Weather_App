@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+/* Background layer */
+#weather-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Rain animation */
+.rain {
+    background: url('https://i.ibb.co/7S8bK3L/rain.png');
+    animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+/* Snow animation */
+.snow {
+    background: url('https://i.ibb.co/VpZ6KzV/snow.png');
+    animation: snow 5s linear infinite;
+}
+
+@keyframes snow {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 500px; }
+}
+
+/* UI */
+.container {
+    margin-top: 80px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Card */
+.card {
+    margin: 20px auto;
+    width: 320px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
